@@ -132,35 +132,61 @@
       margin-top: 24px;
       text-align: center;
     }
-  </style>
+  
+@media (max-width: 480px) {
+  .card {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .left {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .meta {
+    flex: 1;
+  }
+  .btn {
+    width: 100%;
+    text-align: center;
+    margin-top: 12px;
+  }
+}
+
+</style>
 </head>
 <body>
   <div class="wrap">
     <button class="toggle-theme" onclick="toggleTheme()">  Chuyển nền</button>
-<!--     <img class="banner" src="banner.jpg" alt="Banner" /> -->
+    <img class="banner" src="https://k3ndzy.github.io/CeniOs/banner.jpg" alt="FunTap iOS Screenshot" style="width: 100%; border-radius: 12px; margin-bottom: 16px;">
 
-    <!-- App 1: PUBG -->
-    <div class="card">
-      <img src="https://k3ndzy.github.io/CeniOs/banner.jpg" alt="FunTap iOS Screenshot" style="width: 100%; border-radius: 12px; margin-bottom: 16px;">
-      <div class="left">
-        <img class="icon" src="icon-120.png" alt="App Icon" />
-        <div class="meta">
-          <h1>FunTap PUBG</h1>
-          <div class="info">
-            Version: <strong>4.0</strong><br />
-            Bundle ID: <code>xg.pubgmobile.xiao</code><br />
-            <div class="prices">
-              <div>Ngày: <del>10k</del> <strong>5k</strong></div>
-              <div>Tuần: <del>50k</del> <strong>25k</strong></div>
-              <div>Tháng: <del>100k</del> <strong>50k</strong></div>
-            </div>
+<!-- App 1: PUBG -->
+<div class="card">
+  <div class="left">
+    <img class="icon" src="icon-120.png" alt="App Icon" />
+    <div class="meta">
+      <h1>FunTap PUBG</h1>
+      <div class="info">
+        Version: <strong>4.0</strong><br />
+        Bundle ID: <code>xg.pubgmobile.xiao</code><br />
+        <div class="prices">
+          <div>Ngày: <del>10k</del> <strong>5k</strong></div>
+          <div>Tuần: <del>50k</del> <strong>25k</strong></div>
+          <div>Tháng: <del>100k</del> <strong>50k</strong></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="width: 100%; display: flex; justify-content: flex-end;">
+    <a class="btn" href="itms-services://?action=download-manifest&url=https://k3ndzy.github.io/CeniOs/app.plist" onclick="handleInstallClick(this)">Cài đặt</a>
+  </div>
+</div>
+
           </div>
         </div>
       </div>
       <a class="btn" href="itms-services://?action=download-manifest&url=https://k3ndzy.github.io/CeniOs/app.plist" onclick="handleInstallClick(this)">Cài đặt</a>
     </div>
 
-    <!-- App 2: AOV -->
     <div class="card">
       <div class="left">
         <img class="icon" src="icon-120.png" alt="App Icon" />
@@ -180,7 +206,6 @@
       <a class="btn" href="itms-services://?action=download-manifest&url=https://k3ndzy.github.io/CeniOs/lienquanvu.plist" onclick="handleInstallClick(this)">Cài đặt</a>
     </div>
 
-    <!-- Liên hệ -->
     <div class="tips">
       Mở bằng Safari (iPhone/iPad) → Nhấn nút Cài đặt.<br /><br />
       ⭐️ Zalo Admin: <a href="https://zalo.me/420773099399" target="_blank">Cen iOS</a><br />
