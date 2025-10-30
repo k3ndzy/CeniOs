@@ -33,7 +33,7 @@
       <key>metadata</key>
       <dict>
         <key>bundle-identifier</key>
-        <string>com.soimap.game.kgvn</string>
+        <string>com.game.ios</string>
         <key>bundle-version</key>
         <string>4.0</string>
         <key>kind</key>
