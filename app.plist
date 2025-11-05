@@ -36,11 +36,11 @@
 				<key>bundle-identifier</key>
 				<string>xg.pubgmobile.xiao</string>
 				<key>bundle-version</key>
-				<string>4.0</string>
+				<string>4.1</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>Cen-iOs-PUBG</string>
+				<string>Cen-iOs-FunTap</string>
 				<key>subtitle</key>
 				<string>41A472</string>
 			</dict>
