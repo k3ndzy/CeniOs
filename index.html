@@ -222,9 +222,19 @@
     <div class="meta">
       <h1>FunTap PUBG</h1>
       <div class="info">
-        Version: <strong>4.1</strong><br />
-       Update : <strong>5/11</strong><br />
-        Bundle ID: <code>xg.pubgmobile.xiao</code><br /> 
+  Version: <strong>4.1</strong><br />
+  Update : <strong>5/11</strong><br />
+  Bundle ID: <code>xg.pubgmobile.xiao</code><br />
+  Copy: <code id="copyText" style="color: red; cursor: pointer;">Test Copy</code>
+</div>
+
+<script>
+  document.getElementById("copyText").onclick = function() {
+    navigator.clipboard.writeText(this.textContent);
+    alert("Đã copy: " + this.textContent);
+  };
+</script>
+
          <strong>Hiện Trạng:</strong>  <span class="status-safe">Safe Chơi Đc Aim</span><br />
                  <!-- <strong>Hiện Trạng:</strong>  <span class="status-safe">An Toàn</span><br /> -->
 
