@@ -13,6 +13,11 @@ This is a Vietnamese-language promotional landing page for "Cen iOS Store," show
 - Added emoji icons for better visual appeal
 - Removed unnecessary commented-out code
 - Organized all assets in root directory for easier access
+- **NEW: Countdown Timer System** - Free key timers (3h, 6h) with real-time countdown, auto-updates every second
+- **NEW: Statistics Dashboard** - Shows total downloads and simulated online users (random 150-200, updates every 30s)
+- **NEW: Review & Rating System** - Users can rate 1-5 stars and write reviews, stores in localStorage, displays 10 most recent
+- **NEW: Notification Banner** - Auto-appears after 2 seconds on page load, dismissible, announces new apps/keys
+- **SECURITY FIX: XSS Protection** - Implemented HTML escaping for all user-generated review content to prevent XSS attacks
 
 # User Preferences
 

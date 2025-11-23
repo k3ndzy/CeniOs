@@ -11,12 +11,30 @@
 <body>
   <button class="toggle-theme" onclick="toggleTheme()">🌙 Chuyển nền</button>
 
+  <div id="notification" class="notification hidden">
+    <div class="notification-content">
+      <span class="notification-icon">🔔</span>
+      <span class="notification-text"></span>
+      <button class="notification-close" onclick="closeNotification()">×</button>
+    </div>
+  </div>
+
   <div class="container">
     <header class="header">
       <h1>🎮 Cen iOS Store</h1>
+      <div class="stats-bar">
+        <div class="stat-item">
+          <span class="stat-icon">👥</span>
+          <span class="stat-label">Online: <strong id="onlineCount">0</strong></span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-icon">📊</span>
+          <span class="stat-label">Lượt tải: <strong id="totalDownloads">0</strong></span>
+        </div>
+      </div>
     </header>
 
-    <div class="card">
+    <div class="card" data-app="pubg">
       <img class="card-banner" src="banner.jpg" alt="FunTap PUBG Banner">
       
       <div class="card-content">
@@ -31,12 +49,21 @@
               CeniOs-hour-ijEXMWqmg1qyTa1d
             </code>
             <br>
-            <strong>Thời Gian:</strong> 3H Free
+            <strong>Thời Gian:</strong> 
+            <div class="countdown-timer" data-endtime="3">
+              <span class="timer-icon">⏱️</span>
+              <span class="timer-text">Đang tải...</span>
+            </div>
             <br>
             <strong>Version:</strong> 4.1
             <br>
             <strong>Hiện Trạng:</strong> 
             <span class="status-badge">Safe - Chơi Được Aim</span>
+          </div>
+
+          <div class="app-stats">
+            <span class="app-stat">⭐ 4.8/5</span>
+            <span class="app-stat">📥 <span class="download-count">15,234</span> lượt tải</span>
           </div>
 
           <div class="prices">
@@ -48,23 +75,40 @@
       </div>
 
       <div class="button-group">
-        <a class="btn" href="itms-services://?action=download-manifest&url=https://k3ndzy.github.io/CeniOs/app.plist" onclick="handleInstall(this)">
+        <a class="btn" href="itms-services://?action=download-manifest&url=https://k3ndzy.github.io/CeniOs/app.plist" onclick="handleInstall(this, 'pubg')">
           📥 Cài đặt
         </a>
         <a class="btn" href="https://hackmod.vn" target="_blank">
           🔑 Lấy Key (1k-3k)
         </a>
       </div>
+
+      <div class="reviews-section">
+        <h3>💬 Đánh giá & Review</h3>
+        <div class="rating-input">
+          <div class="stars" data-app="pubg">
+            <span class="star" data-rating="1">⭐</span>
+            <span class="star" data-rating="2">⭐</span>
+            <span class="star" data-rating="3">⭐</span>
+            <span class="star" data-rating="4">⭐</span>
+            <span class="star" data-rating="5">⭐</span>
+          </div>
+          <input type="text" class="review-input" placeholder="Viết đánh giá của bạn..." data-app="pubg">
+          <button class="btn-review" onclick="submitReview('pubg')">Gửi</button>
+        </div>
+        <div class="reviews-list" id="reviews-pubg"></div>
+      </div>
     </div>
 
-    <div class="card">
-      <img class="card-banner" src="icon-513.png" alt="App Mới Banner">
+    <div class="card" data-app="newapp">
+      <img class="card-banner" src="banner.jpg" alt="App Mới Banner">
+      <span class="new-badge">🆕 MỚI</span>
       
       <div class="card-content">
         <img class="card-icon" src="icon-120.png" alt="App Icon">
         
         <div class="card-meta">
-          <h2>FunTap ko Giật</h2>
+          <h2>App Game Mới</h2>
           
           <div class="card-info">
             <strong>Key Free:</strong> 
@@ -72,12 +116,21 @@
               NewApp-Key-ABC123XYZ
             </code>
             <br>
-            <strong>Thời Gian:</strong> 6H Free
+            <strong>Thời Gian:</strong> 
+            <div class="countdown-timer" data-endtime="6">
+              <span class="timer-icon">⏱️</span>
+              <span class="timer-text">Đang tải...</span>
+            </div>
             <br>
             <strong>Version:</strong> 1.0
             <br>
             <strong>Hiện Trạng:</strong> 
             <span class="status-badge">An Toàn</span>
+          </div>
+
+          <div class="app-stats">
+            <span class="app-stat">⭐ 4.9/5</span>
+            <span class="app-stat">📥 <span class="download-count">8,521</span> lượt tải</span>
           </div>
 
           <div class="prices">
@@ -89,16 +142,32 @@
       </div>
 
       <div class="button-group">
-        <a class="btn" href="itms-services://?action=download-manifest&url=https://k3ndzy.github.io/CeniOs/Kogiat.plist" onclick="handleInstall(this)">
+        <a class="btn" href="itms-services://?action=download-manifest&url=https://k3ndzy.github.io/CeniOs/app.plist" onclick="handleInstall(this, 'newapp')">
           📥 Cài đặt
         </a>
         <a class="btn" href="https://hackmod.vn" target="_blank">
           🔑 Lấy Key (1k-3k)
         </a>
       </div>
+
+      <div class="reviews-section">
+        <h3>💬 Đánh giá & Review</h3>
+        <div class="rating-input">
+          <div class="stars" data-app="newapp">
+            <span class="star" data-rating="1">⭐</span>
+            <span class="star" data-rating="2">⭐</span>
+            <span class="star" data-rating="3">⭐</span>
+            <span class="star" data-rating="4">⭐</span>
+            <span class="star" data-rating="5">⭐</span>
+          </div>
+          <input type="text" class="review-input" placeholder="Viết đánh giá của bạn..." data-app="newapp">
+          <button class="btn-review" onclick="submitReview('newapp')">Gửi</button>
+        </div>
+        <div class="reviews-list" id="reviews-newapp"></div>
+      </div>
     </div>
 
-    <div class="card">
+    <div class="card" data-app="aov">
       <img class="card-banner" src="Aov.png" alt="Cen Map AOV Banner">
       
       <div class="card-content">
@@ -116,6 +185,11 @@
             <span class="status-badge">An Toàn</span>
           </div>
 
+          <div class="app-stats">
+            <span class="app-stat">⭐ 4.7/5</span>
+            <span class="app-stat">📥 <span class="download-count">12,890</span> lượt tải</span>
+          </div>
+
           <div class="prices">
             <div class="price-item">Ngày: <del>50k</del> <strong>35k</strong></div>
             <div class="price-item">Tuần: <del>150k</del> <strong>80k</strong></div>
@@ -125,7 +199,7 @@
       </div>
 
       <div class="button-group">
-        <a class="btn" href="itms-services://?action=download-manifest&url=https://k3ndzy.github.io/CeniOs/lienquanvu.plist" onclick="handleInstall(this)">
+        <a class="btn" href="itms-services://?action=download-manifest&url=https://k3ndzy.github.io/CeniOs/lienquanvu.plist" onclick="handleInstall(this, 'aov')">
           📥 Cài đặt
         </a>
         <a class="btn" href="https://hackmod.vn" target="_blank">
@@ -134,6 +208,22 @@
         <a class="btn" href="https://link4sub.com/9WwM" target="_blank">
           🎁 Fun Link 1 Ngày (Free)
         </a>
+      </div>
+
+      <div class="reviews-section">
+        <h3>💬 Đánh giá & Review</h3>
+        <div class="rating-input">
+          <div class="stars" data-app="aov">
+            <span class="star" data-rating="1">⭐</span>
+            <span class="star" data-rating="2">⭐</span>
+            <span class="star" data-rating="3">⭐</span>
+            <span class="star" data-rating="4">⭐</span>
+            <span class="star" data-rating="5">⭐</span>
+          </div>
+          <input type="text" class="review-input" placeholder="Viết đánh giá của bạn..." data-app="aov">
+          <button class="btn-review" onclick="submitReview('aov')">Gửi</button>
+        </div>
+        <div class="reviews-list" id="reviews-aov"></div>
       </div>
     </div>
 
@@ -170,6 +260,8 @@
   </div>
 
   <script>
+    let selectedRatings = { pubg: 0, newapp: 0, aov: 0 };
+
     function toggleTheme() {
       document.body.classList.toggle('dark');
       const btn = document.querySelector('.toggle-theme');
@@ -180,16 +272,18 @@
     function copyKey(element) {
       const text = element.textContent.trim();
       navigator.clipboard.writeText(text).then(() => {
-        alert('✅ Đã copy key!\n\n' + text + '\n\nHãy dán vào ứng dụng FunTap');
+        alert('✅ Đã copy key!\n\n' + text + '\n\nHãy dán vào ứng dụng');
       }).catch(() => {
         alert('❌ Không thể copy. Vui lòng copy thủ công.');
       });
     }
 
-    function handleInstall(button) {
+    function handleInstall(button, appId) {
       const originalText = button.innerHTML;
       button.innerHTML = '⏳ Đang loading...';
       button.style.pointerEvents = 'none';
+      
+      incrementDownload(appId);
       
       setTimeout(() => {
         button.innerHTML = originalText;
@@ -197,10 +291,173 @@
       }, 2000);
     }
 
-    if (localStorage.getItem('theme') === 'dark') {
-      document.body.classList.add('dark');
-      document.querySelector('.toggle-theme').textContent = '☀️ Chuyển nền';
+    function incrementDownload(appId) {
+      const card = document.querySelector(`[data-app="${appId}"]`);
+      if (!card) return;
+      
+      const countElem = card.querySelector('.download-count');
+      if (countElem) {
+        let count = parseInt(countElem.textContent.replace(/,/g, ''));
+        count++;
+        countElem.textContent = count.toLocaleString();
+      }
+      
+      updateTotalDownloads();
     }
+
+    function updateTotalDownloads() {
+      let total = 0;
+      document.querySelectorAll('.download-count').forEach(elem => {
+        total += parseInt(elem.textContent.replace(/,/g, ''));
+      });
+      document.getElementById('totalDownloads').textContent = total.toLocaleString();
+    }
+
+    function updateOnlineCount() {
+      const count = Math.floor(Math.random() * 50) + 150;
+      document.getElementById('onlineCount').textContent = count;
+    }
+
+    function initCountdowns() {
+      document.querySelectorAll('.countdown-timer').forEach(timer => {
+        const hours = parseInt(timer.getAttribute('data-endtime'));
+        const endTime = new Date().getTime() + (hours * 60 * 60 * 1000);
+        
+        const updateTimer = () => {
+          const now = new Date().getTime();
+          const distance = endTime - now;
+          
+          if (distance < 0) {
+            timer.querySelector('.timer-text').textContent = 'Hết hạn';
+            return;
+          }
+          
+          const h = Math.floor(distance / (1000 * 60 * 60));
+          const m = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+          const s = Math.floor((distance % (1000 * 60)) / 1000);
+          
+          timer.querySelector('.timer-text').textContent = 
+            `${h}h ${m}m ${s}s còn lại`;
+        };
+        
+        updateTimer();
+        setInterval(updateTimer, 1000);
+      });
+    }
+
+    function submitReview(appId) {
+      const rating = selectedRatings[appId];
+      const input = document.querySelector(`.review-input[data-app="${appId}"]`);
+      const text = input.value.trim();
+      
+      if (rating === 0) {
+        alert('Vui lòng chọn số sao đánh giá!');
+        return;
+      }
+      
+      if (text === '') {
+        alert('Vui lòng viết đánh giá!');
+        return;
+      }
+      
+      const reviews = JSON.parse(localStorage.getItem(`reviews_${appId}`) || '[]');
+      reviews.unshift({
+        rating: rating,
+        text: text,
+        date: new Date().toLocaleDateString('vi-VN'),
+        time: new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit' })
+      });
+      
+      localStorage.setItem(`reviews_${appId}`, JSON.stringify(reviews.slice(0, 10)));
+      
+      input.value = '';
+      selectedRatings[appId] = 0;
+      resetStars(appId);
+      
+      loadReviews(appId);
+      alert('✅ Cảm ơn bạn đã đánh giá!');
+    }
+
+    function escapeHtml(text) {
+      const div = document.createElement('div');
+      div.textContent = text;
+      return div.innerHTML;
+    }
+
+    function loadReviews(appId) {
+      const reviews = JSON.parse(localStorage.getItem(`reviews_${appId}`) || '[]');
+      const container = document.getElementById(`reviews-${appId}`);
+      
+      if (reviews.length === 0) {
+        container.innerHTML = '<p class="no-reviews">Chưa có đánh giá nào. Hãy là người đầu tiên!</p>';
+        return;
+      }
+      
+      container.innerHTML = reviews.map(review => `
+        <div class="review-item">
+          <div class="review-header">
+            <span class="review-stars">${'⭐'.repeat(review.rating)}</span>
+            <span class="review-date">${escapeHtml(review.date)} ${escapeHtml(review.time)}</span>
+          </div>
+          <p class="review-text">${escapeHtml(review.text)}</p>
+        </div>
+      `).join('');
+    }
+
+    function resetStars(appId) {
+      const stars = document.querySelectorAll(`.stars[data-app="${appId}"] .star`);
+      stars.forEach(star => star.classList.remove('selected'));
+    }
+
+    function showNotification(message, duration = 5000) {
+      const notification = document.getElementById('notification');
+      notification.querySelector('.notification-text').textContent = message;
+      notification.classList.remove('hidden');
+      
+      setTimeout(() => {
+        notification.classList.add('hidden');
+      }, duration);
+    }
+
+    function closeNotification() {
+      document.getElementById('notification').classList.add('hidden');
+    }
+
+    document.addEventListener('DOMContentLoaded', () => {
+      if (localStorage.getItem('theme') === 'dark') {
+        document.body.classList.add('dark');
+        document.querySelector('.toggle-theme').textContent = '☀️ Chuyển nền';
+      }
+      
+      initCountdowns();
+      updateTotalDownloads();
+      updateOnlineCount();
+      setInterval(updateOnlineCount, 30000);
+      
+      ['pubg', 'newapp', 'aov'].forEach(appId => loadReviews(appId));
+      
+      document.querySelectorAll('.stars').forEach(starsContainer => {
+        const appId = starsContainer.getAttribute('data-app');
+        starsContainer.querySelectorAll('.star').forEach(star => {
+          star.addEventListener('click', () => {
+            const rating = parseInt(star.getAttribute('data-rating'));
+            selectedRatings[appId] = rating;
+            
+            starsContainer.querySelectorAll('.star').forEach((s, index) => {
+              if (index < rating) {
+                s.classList.add('selected');
+              } else {
+                s.classList.remove('selected');
+              }
+            });
+          });
+        });
+      });
+      
+      setTimeout(() => {
+        showNotification('🎉 App Game Mới vừa được ra mắt! Key free 6 giờ có sẵn.');
+      }, 2000);
+    });
   </script>
 </body>
 </html>
