@@ -36,7 +36,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>xg.pubgmobile.xiao</string>
+				<string>cen.app4.pubgmobile</string>
 				<key>bundle-version</key>
 				<string>4.1</string>
 				<key>kind</key>
