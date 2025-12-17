@@ -12,7 +12,7 @@
 					<string>software-package</string>
 					<key>url</key>
 
-              	<string>https://zsignappcen.s3-hcm-r1.s3cloud.vn/ipa/69412eaf05086_693227a921594_Pay2.ipa</string>
+              	<string>https://zsignappcen.s3-hcm-r1.s3cloud.vn/ipa/693e696c35cc8_1412.ipa</string>
 
 
 				</dict>
@@ -36,7 +36,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>minh.app.pubgmobile</string>
+				<string>xg.pubgmobile.xiao</string>
 				<key>bundle-version</key>
 				<string>4.1</string>
 				<key>kind</key>
