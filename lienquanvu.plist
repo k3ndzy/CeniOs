@@ -33,13 +33,13 @@
       <key>metadata</key>
       <dict>
         <key>bundle-identifier</key>
-        <string>com.soimap.game.kgvn.map</string>
+        <string>com.soimap.game.kgvn.mod</string>
         <key>bundle-version</key>
         <string>4.0</string>
         <key>kind</key>
         <string>software</string>
         <key>title</key>
-        <string>Free</string>
+        <string>Free LQ 0401</string>
         <key>subtitle</key>
         <string>41A472</string>
       </dict>
