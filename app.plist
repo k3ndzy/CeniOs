@@ -12,7 +12,7 @@
 					<string>software-package</string>
 					<key>url</key>
 
-              	<string>https://zsignappcen.s3-hcm-r1.s3cloud.vn/ipa/69412eaf05086_693227a921594_Pay2.ipa</string>
+              	<string>https://zsignappcen.s3-hcm-r1.s3cloud.vn/ipa/698077eeeb2f9_FuntapEsponly1601.ipa</string>
 
 
 				</dict>
@@ -36,13 +36,13 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>minh.app.pubgmobile</string>
+				<string>cen.ios.pubgmobile</string>
 				<key>bundle-version</key>
-				<string>4.1</string>
+				<string>4.2</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>FunTap 29/12</string>
+				<string>FunTap Free</string>
 				<key>subtitle</key>
 				<string>41A472</string>
 			</dict>
