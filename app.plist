@@ -36,7 +36,7 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>cen.ios.pubgmobile1</string>
+				<string>com.riotgames.league.wildrift</string>
 				<key>bundle-version</key>
 				<string>4.2</string>
 				<key>kind</key>
