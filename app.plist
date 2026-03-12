@@ -36,13 +36,13 @@
 			<key>metadata</key>
 			<dict>
 				<key>bundle-identifier</key>
-				<string>cen.ios.pubgmobile1</string>
+				<string>Cen.ios.pubgmobile</string>
 				<key>bundle-version</key>
 				<string>4.2</string>
 				<key>kind</key>
 				<string>software</string>
 				<key>title</key>
-				<string>Funtap V3.1</string>
+				<string>Funtap Free 4.3</string>
 				<key>subtitle</key>
 				<string>41A472</string>
 			</dict>
